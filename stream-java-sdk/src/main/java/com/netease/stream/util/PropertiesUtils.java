@@ -16,12 +16,20 @@ public class PropertiesUtils {
     private static String platform = null;
     /** User Agent info */
     private static String userAgent = null;
-    /** streams proxy host */
-    private static String streamsProxyHost = null;
+    /** log subscription host */
+    private static String logSubscriptionHost = null;
+    /** stream host */
+    private static String streamHost = null;
     /** subscription position resource path */
     private static String subscriptionPositionResourcePath = null;
     /** get logs resource path */
     private static String getLogsResourcePath = null;
+    /** get offset resource path */
+    private static String getOffsetResourcePath = null;
+    /** get record resource path */
+    private static String getRecordsResourcePath = null;
+    /** put record resource path */
+    private static String putRecordsResourcePath = null;
 
     /**
      * Returns the current version for the SDK in which this class is running. Version information
@@ -40,7 +48,7 @@ public class PropertiesUtils {
     }
 
     /**
-     * Returns the current platform for the SDK in which this class is running. Version information
+     * Returns the current platform for the SDK in which this class is running. platform information
      * is obtained from from the properties.properties file which the Java SDK build process
      * generates.
      * 
@@ -55,22 +63,34 @@ public class PropertiesUtils {
         return platform;
     }
 
-
-
     /**
-     * Returns the current streams proxy host for the SDK in which this class is running. Version
-     * information is obtained from from the properties.properties file which the Java SDK build
-     * process generates.
+     * Returns the current log subscription host for the SDK in which this class is running.
+     * logSubscriptionHost information is obtained from from the properties.properties file which
+     * the Java SDK build process generates.
      * 
-     * @return The current platform for the SDK, if known, otherwise returns a string indicating
-     *         that the platform information is not available.
+     * @return log subscription host.
      */
-    public static String getStreamsProxyHost() {
-        if (streamsProxyHost == null) {
+    public static String getLogSubscriptionHost() {
+        if (logSubscriptionHost == null) {
             initializeProperties();
         }
 
-        return streamsProxyHost;
+        return logSubscriptionHost;
+    }
+
+    /**
+     * Returns the current stream host for the SDK in which this class is running. streamHost
+     * information is obtained from from the properties.properties file which the Java SDK build
+     * process generates.
+     * 
+     * @return stream host.
+     */
+    public static String getStreamHost() {
+        if (streamHost == null) {
+            initializeProperties();
+        }
+
+        return streamHost;
     }
 
     /**
@@ -78,8 +98,7 @@ public class PropertiesUtils {
      * running. subscriptionPosition resource path information is obtained from from the
      * properties.properties file which the Java SDK build process generates.
      * 
-     * @return The current platform for the SDK, if known, otherwise returns a string indicating
-     *         that the platform information is not available.
+     * @return subscription position resource path.
      */
     public static String getSubscriptionPositionResourcePath() {
         if (subscriptionPositionResourcePath == null) {
@@ -90,12 +109,11 @@ public class PropertiesUtils {
     }
 
     /**
-     * Returns the current logs resource path for the SDK in which this class is running. getLogs
+     * Returns the current logs resource path for the SDK in which this class is running. Logs
      * resource path information is obtained from from the properties.properties file which the Java
      * SDK build process generates.
      * 
-     * @return The current platform for the SDK, if known, otherwise returns a string indicating
-     *         that the platform information is not available.
+     * @return logs resource path.
      */
     public static String getLogsResourcePath() {
         if (getLogsResourcePath == null) {
@@ -104,6 +122,53 @@ public class PropertiesUtils {
 
         return getLogsResourcePath;
     }
+
+
+    /**
+     * Returns the offset resource path for the SDK in which this class is running. offset resource
+     * path information is obtained from from the properties.properties file which the Java SDK
+     * build process generates.
+     * 
+     * @return logs resource path.
+     */
+    public static String getOffsetResourcePath() {
+        if (getOffsetResourcePath == null) {
+            initializeProperties();
+        }
+
+        return getOffsetResourcePath;
+    }
+
+    /**
+     * Returns the records resource path for the SDK in which this class is running. records
+     * resource path information is obtained from from the properties.properties file which the Java
+     * SDK build process generates.
+     * 
+     * @return logs resource path.
+     */
+    public static String getRecordsResourcePath() {
+        if (getRecordsResourcePath == null) {
+            initializeProperties();
+        }
+
+        return getRecordsResourcePath;
+    }
+
+    /**
+     * Returns the put records resource path for the SDK in which this class is running. put records
+     * resource path information is obtained from from the properties.properties file which the Java
+     * SDK build process generates.
+     * 
+     * @return logs resource path.
+     */
+    public static String getPutRecordsResourcePath() {
+        if (putRecordsResourcePath == null) {
+            initializeProperties();
+        }
+
+        return putRecordsResourcePath;
+    }
+
 
     /**
      * @return Returns the User Agent string to be used when communicating with the services. The
@@ -132,10 +197,14 @@ public class PropertiesUtils {
             versionInfoProperties.load(inputStream);
             version = versionInfoProperties.getProperty("version");
             platform = versionInfoProperties.getProperty("platform");
-            streamsProxyHost = versionInfoProperties.getProperty("streamsProxyHost");
+            logSubscriptionHost = versionInfoProperties.getProperty("logSubscriptionHost");
+            streamHost = versionInfoProperties.getProperty("streamHost");
             subscriptionPositionResourcePath =
                     versionInfoProperties.getProperty("subscriptionPositionResourcePath");
             getLogsResourcePath = versionInfoProperties.getProperty("getLogsResourcePath");
+            getOffsetResourcePath = versionInfoProperties.getProperty("getOffsetResourcePath");
+            getRecordsResourcePath = versionInfoProperties.getProperty("getRecordsResourcePath");
+            putRecordsResourcePath = versionInfoProperties.getProperty("putRecordsResourcePath");
         } catch (Exception e) {
             version = "unknown-version";
             platform = "java";

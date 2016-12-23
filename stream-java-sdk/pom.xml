@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.netease.cloud</groupId>
-	<artifactId>streamproxy-sdk-java</artifactId>
+	<groupId>com.netease.stream</groupId>
+	<artifactId>stream-java-sdk</artifactId>
 	<version>0.1</version>
-	<name>com.netease.cloud:streamproxy-sdk-java</name>
-	<description>Streamproxy SDK Java</description>
-	<url>https://github.com/NetEase-Cloudsearch/streamproxy-sdk-java</url>
+	<name>com.netease.stream:stream-java-sdk</name>
+	<description>Stream Java SDK</description>
+	<url>https://github.com/NetEase-Cloudsearch/stream-java-sdk</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -17,14 +17,14 @@
 		<developer>
 			<name>hzhuangzhenxi</name>
 			<email>hzhuangzhenxi@corp.netease.com</email>
-			<organization>netease</organization>
+			<organization>NetEase</organization>
 			<organizationUrl>http://www.163.com/</organizationUrl>
 		</developer>
 	</developers>
 	<scm>
-		<connection>https://github.com/NetEase-Cloudsearch/streamproxy-sdk-java.git</connection>
-		<developerConnection>https://github.com/NetEase-Cloudsearch/streamproxy-sdk-java.git</developerConnection>
-		<url>https://github.com/NetEase-Cloudsearch/streamproxy-sdk-java</url>
+		<connection>https://github.com/NetEase-Cloudsearch/stream-java-sdk.git</connection>
+		<developerConnection>https://github.com/NetEase-Cloudsearch/stream-java-sdk.git</developerConnection>
+		<url>https://github.com/NetEase-Cloudsearch/stream-java-sdk</url>
 		<tag>v0.1</tag>
 	</scm>
 	<build>
