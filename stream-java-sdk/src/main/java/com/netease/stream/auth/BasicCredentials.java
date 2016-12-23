@@ -23,7 +23,7 @@ public class BasicCredentials implements Credentials {
     /*
      * (non-Javadoc)
      * 
-     * @see com.com.netease.cloud.auth.Credentials#getAccessKeyId()
+     * @see com.com.netease.stream.auth.Credentials#getAccessKeyId()
      */
     public String getAccessKeyId() {
         return accessKey;
@@ -32,7 +32,7 @@ public class BasicCredentials implements Credentials {
     /*
      * (non-Javadoc)
      * 
-     * @see com.netease.cloud.auth.Credentials#getSecretKey()
+     * @see com.netease.stream.auth.Credentials#getSecretKey()
      */
     public String getSecretKey() {
         return secretKey;
