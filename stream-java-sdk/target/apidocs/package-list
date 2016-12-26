@@ -1,0 +1,8 @@
+com.netease.stream.auth
+com.netease.stream.client
+com.netease.stream.config
+com.netease.stream.exception
+com.netease.stream.http
+com.netease.stream.test
+com.netease.stream.util
+com.netease.stream.util.json
